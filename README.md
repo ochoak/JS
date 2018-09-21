@@ -18,6 +18,7 @@ Hago pocas validaciones, la principal es que el objeto exista. Luego una vez que
 
 
 He definido diferentes objetos para ver distintos comportamientos: uno vacio, uno con submit o solo inputs de texto.
+
 Las funciones se pueden encapsular más, para hacerlas más funcionales.
 
 Al objeto se puede añadir un campo label y  añadirlo al input: 
