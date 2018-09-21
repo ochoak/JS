@@ -16,7 +16,9 @@ Hago pocas validaciones, la principal es que el objeto exista. Luego una vez que
 
 - en el caso de required, primero comprueba que este y si es así, en caso de TRUE, lo añado.
 
+
 He definido diferentes objetos para ver distintos comportamientos: uno vacio, uno con submit o solo inputs de texto.
+Las funciones se pueden encapsular más, para hacerlas más funcionales.
 
 Al objeto se puede añadir un campo label y  añadirlo al input: 
   label: "label del campo" // string
@@ -25,4 +27,3 @@ Al objeto se puede añadir un campo label y  añadirlo al input:
   label for="nameInput" Texto /label
   input type="loquesea" name="nameInput" id=""
   <code></pre>
-Las funciones se pueden encapsular más, para hacerlas más funcionales.
