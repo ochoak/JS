@@ -6,118 +6,118 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
-   var valuesFormEmpty;  
-var valuesForm1 = 
-  [
-      {
-          type     : "text",
-          name     : "phone",
-          id       : "idPhone",
-          required : true 
-      },
-      {
-          type     : "number",
-          name     : "name",
-          //id       : "idName",
-          required : false 
-      }, 
-      {
+    var valuesFormEmpty;  
+    var valuesForm1 = 
+    [
+        {
+            type     : "text",
+            name     : "phone",
+            id       : "idPhone",
+            required : true 
+        },
+        {
+            type     : "number",
+            name     : "name",
+            //id       : "idName",
+            required : false 
+        }, 
+        {
         type     : "text",
         name     : "addres",
         id       : "idAddres",
         required : true 
-      },   
-      {
+        },   
+        {
         type     : "submit",
         name     : "submitForm",
         id       : "idSubmitForm",
-      },               
-  ];  
+        },               
+    ];  
 
-        var valuesForm2 = 
-        [
-            {
-                type     : "text",
-                name     : "name1",
-                id       : "idName1",
-                required : true 
-            },
-            {
-                type     : "text",
-                name     : "name2",
-                id       : "idName2",
-                required : false 
-            }, 
-            {
+    var valuesForm2 = 
+    [
+        {
             type     : "text",
-            name     : "name3",
-            id       : "idName3",
+            name     : "name1",
+            id       : "idName1",
             required : true 
-            },   
-                    
-        ];  
-
-        var myCallback = function(){
-        console.log("END");
-        }
-
-        function random() {
-            var random = Math.floor(Math.random() * 99); 
-            return random;
-        }
-
-        function createElement( e ){
-            return document.createElement( e );
-        }
-
-        function insertElement( parent, e ){
-            parent.appendChild( e );
-            return parent;   
-        }
-
-        var createForm = function( arrayForm, callback ){
-
-            if(!arrayForm) {
-                console.log('No existen datos');
-                return null; 
-            }else{
-
-                var form = createElement( 'form' );            
+        },
+        {
+            type     : "text",
+            name     : "name2",
+            id       : "idName2",
+            required : false 
+        }, 
+        {
+        type     : "text",
+        name     : "name3",
+        id       : "idName3",
+        required : true 
+        },   
                 
-                for( let i=0; i<arrayForm.length; i++ ){
+    ];  
+
+    var myCallback = function(){
+    console.log("END");
+    }
+
+    function random() {
+        var random = Math.floor(Math.random() * 99); 
+        return random;
+    }
+
+    function createElement( e ){
+        return document.createElement( e );
+    }
+
+    function insertElement( parent, e ){
+        parent.appendChild( e );
+        return parent;   
+    }
+
+    var createForm = function( arrayForm, callback ){
+
+        if(!arrayForm) {
+            console.log('No existen datos');
+            return null; 
+        }else{
+
+            var form = createElement( 'form' );            
+            
+            for( let i=0; i<arrayForm.length; i++ ){
+                
+                let _input = document.createElement( 'input' );
                     
-                    let _input = document.createElement( 'input' );
-                        
-                    //CHECK TYPE
-                    if( arrayForm[i].hasOwnProperty( 'type' ) ){
-                        _input.setAttribute('type', arrayForm[i].type);
-                    }else{                
-                        _input.setAttribute('type', 'text'); //by default an input field is text type
-                    }
-                    //CHECK NAME
-                    if( arrayForm[i].hasOwnProperty( 'name' ) ){
-                        _input.setAttribute('name', arrayForm[i].name);            
-                    }
-
-                    //CHECK ID
-                    if( arrayForm[i].hasOwnProperty( 'id' ) ){
-                        _input.setAttribute('id', arrayForm[i].id);
-                    }
-                    else{                
-                        _input.setAttribute('id', 'input'+random()); //generate a random ID
-                    }
-
-                    //CHECK REQUIRED
-                    if( arrayForm[i].hasOwnProperty( 'required') ){
-                        if(arrayForm[i].required){
-                            _input.setAttribute('required', 'required');
-                        }
-                    }                  
-                    form = insertElement(form, _input);
+                //CHECK TYPE
+                if( arrayForm[i].hasOwnProperty( 'type' ) ){
+                    _input.setAttribute('type', arrayForm[i].type);
+                }else{                
+                    _input.setAttribute('type', 'text'); //by default an input field is text type
                 }
-                return form; 
+                //CHECK NAME
+                if( arrayForm[i].hasOwnProperty( 'name' ) ){
+                    _input.setAttribute('name', arrayForm[i].name);            
+                }
+
+                //CHECK ID
+                if( arrayForm[i].hasOwnProperty( 'id' ) ){
+                    _input.setAttribute('id', arrayForm[i].id);
+                }
+                else{                
+                    _input.setAttribute('id', 'input'+random()); //generate a random ID
+                }
+
+                //CHECK REQUIRED
+                if( arrayForm[i].hasOwnProperty( 'required') ){
+                    if(arrayForm[i].required){
+                        _input.setAttribute('required', 'required');
+                    }
+                }                  
+                form = insertElement(form, _input);
             }
+            return form; 
         }
+    }
     </script>  
     <style>
         input{
