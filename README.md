@@ -22,7 +22,7 @@ Al objeto se puede añadir un campo label y  añadirlo al input:
   label: "label del campo" // string
 
   <pre><code>
-  label for="nameInput"> Texto </label
+  label for="nameInput" Texto /label
   input type="loquesea" name="nameInput" id=""
   <code></pre>
 Las funciones se pueden encapsular más, para hacerlas más funcionales.
