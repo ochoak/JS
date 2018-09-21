@@ -21,7 +21,8 @@ He definido diferentes objetos para ver distintos comportamientos: uno vacio, un
 Al objeto se puede añadir un campo label y  añadirlo al input: 
   label: "label del campo" // string
 
+  <pre>
   <label for="nameInput"> Texto </label>
   <input type="loquesea" name="nameInput" id="">
-
+  </pre>
 Las funciones se pueden encapsular más, para hacerlas más funcionales.
